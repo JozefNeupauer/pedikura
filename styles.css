@@ -412,12 +412,17 @@ select:focus-visible,
   padding: 10px;
 }
 
-.certificate-card img {
+.certificate-card img,
+.certificate-image-placeholder {
   width: 100%;
   height: 165px;
-  object-fit: cover;
   border-radius: 14px;
   display: block;
+}
+
+.certificate-image-placeholder {
+  border: 2px dashed #e8d8db;
+  background: linear-gradient(180deg, #fffdfd 0%, #fcf5f6 100%);
 }
 
 .certificate-card h3 {
