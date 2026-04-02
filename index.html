@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salón pedikúry</title>
+    <meta
+      name="description"
+      content="Profesionálna pedikúra v príjemnom prostredí. Pohodlie, hygiena a kvalitná starostlivosť o vaše nohy."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-top"></div>
+    <div class="bg-shape bg-shape-bottom"></div>
+
+    <header class="site-header fade-in">
+      <p class="brand">Salón pedikúry</p>
+      <a class="cta cta-small" href="#rezervacia">Rezervovať termín</a>
+    </header>
+
+    <main>
+      <section class="hero fade-in" id="uvod">
+        <p class="eyebrow">Vaše pohodlie na prvom mieste</p>
+        <h1>Profesionálna pedikúra v pokojnej atmosfére</h1>
+        <p class="lead">
+          S dôrazom na hygienu, precíznosť a jemný prístup sa postaráme o krásu a
+          zdravie vašich nôh.
+        </p>
+
+        <div class="hero-actions">
+          <a class="cta" href="#rezervacia">Rezervovať termín</a>
+          <a class="ghost" href="#onas">O nás</a>
+        </div>
+      </section>
+
+      <section class="about fade-in" id="onas">
+        <article class="card">
+          <h2>O nás</h2>
+          <p>
+            Sme malý salón pedikúry, kde spájame profesionálnu starostlivosť,
+            čisté prostredie a osobný prístup. Naším cieľom je, aby ste odchádzali
+            spokojní, oddýchnutí a s pocitom istoty.
+          </p>
+        </article>
+
+        <article class="card icon-card">
+          <h3>Prečo si nás klientky vyberajú</h3>
+          <ul>
+            <li><span aria-hidden="true">✦</span> Sterilné nástroje a vysoká hygiena</li>
+            <li><span aria-hidden="true">✦</span> Kvalitné produkty a šetrná starostlivosť</li>
+            <li><span aria-hidden="true">✦</span> Pohodlné, pokojné a príjemné prostredie</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="reservation-teaser fade-in" id="rezervacia">
+        <div class="card">
+          <h2>Rezervačný systém</h2>
+          <p>Vyberte si termín a vyplňte krátky formulár. Obsadené časy sú označené.</p>
+
+          <div class="booking-grid">
+            <div class="booking-picker">
+              <label for="bookingDate">Dátum návštevy</label>
+              <input id="bookingDate" name="bookingDate" type="date" required />
+
+              <p class="time-title">Voľné časy</p>
+              <div id="timeSlots" class="time-slots" role="radiogroup" aria-label="Výber času"></div>
+            </div>
+
+            <form id="bookingForm" class="booking-form" novalidate>
+              <div class="field">
+                <label for="fullName">Meno a priezvisko</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field two-cols">
+                <div>
+                  <label for="contact">Telefón alebo email</label>
+                  <input
+                    id="contact"
+                    name="contact"
+                    type="text"
+                    autocomplete="email"
+                    placeholder="0900 000 000 alebo meno@email.sk"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="service">Služba</label>
+                  <select id="service" name="service" required>
+                    <option value="">Vyberte službu</option>
+                    <option value="Klasická pedikúra">Klasická pedikúra</option>
+                    <option value="Medicínska pedikúra">Medicínska pedikúra</option>
+                    <option value="Starostlivosť o nechty">Starostlivosť o nechty</option>
+                  </select>
+                </div>
+              </div>
+
+              <input id="selectedTime" name="selectedTime" type="hidden" required />
+
+              <button class="cta" type="submit">Potvrdiť rezerváciu</button>
+              <p id="bookingFeedback" class="booking-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="services fade-in" id="sluzby">
+        <div class="section-heading">
+          <p class="eyebrow">O službách</p>
+          <h2>Starostlivosť prispôsobená vašim potrebám</h2>
+          <p>
+            Každú službu poskytujeme s dôrazom na kvalitu, čistotu a pohodlie,
+            aby ste sa cítili príjemne počas celej návštevy.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <p class="service-icon" aria-hidden="true">🩷</p>
+            <h3>Klasická pedikúra</h3>
+            <p>
+              Úprava nechtov, ošetrenie pokožky a záverečná starostlivosť pre
+              svieži a upravený vzhľad nôh.
+            </p>
+          </article>
+
+          <article class="card service-card">
+            <p class="service-icon" aria-hidden="true">🩺</p>
+            <h3>Medicínska pedikúra</h3>
+            <p>
+              Odborné riešenie problémov chodidiel s hygienickým prístupom,
+              citlivosťou a profesionálnymi postupmi.
+            </p>
+          </article>
+
+          <article class="card service-card">
+            <p class="service-icon" aria-hidden="true">✨</p>
+            <h3>Starostlivosť o nechty</h3>
+            <p>
+              Precízne tvarovanie, úprava a výživa nechtov, aby boli zdravé,
+              pevné a esteticky upravené.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery fade-in" id="galeria">
+        <div class="section-heading">
+          <p class="eyebrow">Galéria</p>
+          <h2>Ukážky našej práce a prostredia</h2>
+          <p>
+            Pred a po ošetrení, detailná práca na nechtoch a príjemný interiér
+            salónu.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card card">
+            <img
+              src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80"
+              alt="Pedikúra pred a po ošetrení"
+              loading="lazy"
+            />
+            <figcaption>Pred a po ošetrení</figcaption>
+          </figure>
+
+          <figure class="gallery-card card">
+            <img
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80"
+              alt="Detail úpravy nechtov"
+              loading="lazy"
+            />
+            <figcaption>Detailná práca na nechtoch</figcaption>
+          </figure>
+
+          <figure class="gallery-card card">
+            <img
+              src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
+              alt="Interiér salónu pedikúry"
+              loading="lazy"
+            />
+            <figcaption>Pokojný interiér salónu</figcaption>
+          </figure>
+
+          <figure class="gallery-card card">
+            <img
+              src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80"
+              alt="Príprava hygienických nástrojov"
+              loading="lazy"
+            />
+            <figcaption>Hygiena a sterilná príprava</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="certificates fade-in" id="certifikaty">
+        <div class="section-heading">
+          <p class="eyebrow">Certifikáty</p>
+          <h2>Odbornosť podložená kvalifikáciou</h2>
+          <p>
+            Pravidelne sa vzdelávame, aby sme vám poskytli bezpečnú,
+            modernú a profesionálnu starostlivosť.
+          </p>
+        </div>
+
+        <div class="certificates-grid">
+          <article class="card certificate-card">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+              alt="Certifikát klasickej pedikúry"
+              loading="lazy"
+            />
+            <h3>Akreditovaný kurz pedikúry</h3>
+            <p>Základné a pokročilé techniky klasickej pedikúry.</p>
+          </article>
+
+          <article class="card certificate-card">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80"
+              alt="Certifikát hygieny a sterilizácie"
+              loading="lazy"
+            />
+            <h3>Hygiena a sterilizácia</h3>
+            <p>Bezpečné pracovné postupy a najvyšší hygienický štandard.</p>
+          </article>
+
+          <article class="card certificate-card">
+            <img
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+              alt="Certifikát medicínskej pedikúry"
+              loading="lazy"
+            />
+            <h3>Medicínska pedikúra</h3>
+            <p>Odborná starostlivosť o problémové chodidlá a nechty.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact fade-in" id="kontakt">
+        <div class="section-heading">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Radi vás privítame v salóne</h2>
+          <p>Objednajte sa telefonicky, emailom alebo cez rezervačný formulár vyššie.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="card contact-card">
+            <h3>Kontaktné údaje</h3>
+            <ul class="contact-list">
+              <li>
+                <span aria-hidden="true">☎</span>
+                <a href="tel:+421900123456">+421 900 123 456</a>
+              </li>
+              <li>
+                <span aria-hidden="true">✉</span>
+                <a href="mailto:rezervacie@vasadomena.sk">rezervacie@vasadomena.sk</a>
+              </li>
+              <li>
+                <span aria-hidden="true">⌂</span>
+                Hlavná 24, 811 01 Bratislava
+              </li>
+            </ul>
+          </article>
+
+          <article class="card contact-card">
+            <h3>Otváracie hodiny</h3>
+            <ul class="hours-list">
+              <li><strong>Pondelok - Piatok:</strong> 08:30 - 18:00</li>
+              <li><strong>Sobota:</strong> 09:00 - 14:00</li>
+              <li><strong>Nedeľa:</strong> Zatvorené</li>
+            </ul>
+          </article>
+
+          <article class="card map-card">
+            <h3>Kde nás nájdete</h3>
+            <iframe
+              title="Mapa salónu pedikúry"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Bratislava%20Hlavn%C3%A1%2024&output=embed"
+            ></iframe>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
